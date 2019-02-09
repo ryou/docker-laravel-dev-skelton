@@ -58,6 +58,12 @@ composerがインストールするパッケージのバージョンをDockerの
 
 [composerでPHPのバージョンを制限したい - Qiita](https://qiita.com/kd9951/items/14cddc050745185011ee)
 
+#### パッケージインストール
+
+```
+composer install
+```
+
 #### `.env`ファイル作成
 
 ```
