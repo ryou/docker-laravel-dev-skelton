@@ -70,3 +70,45 @@ composer install
 cp .env.example .env
 php artisan key:generate
 ```
+
+## XDebugの使用方法
+
+Docker側の必要な設定は準備済なので、エディタに応じて以下の例のように設定すればいけるはず。
+
+### VSCode
+
+`PHP Debug`拡張を入れて、以下の設定を適用。
+
+```
+{
+  ~
+  "configurations": [
+    {
+      "name": "Listen for XDebug",
+      "type": "php",
+      "request": "launch",
+      "port": 9000,
+      "pathMappings": {
+        "/var/www/html": "${workSpaceRoot}"
+      }
+    },
+    ~
+  ]
+}
+```
+
+### PHPStorm
+
+以下の設定例のようにすればいけるはず。
+
+#### `Preference > Language&Frameworks > PHP > Servers`の設定例
+
+![](./readme_images/servers.png)
+
+#### `Run > Edit Configrations`の設定例
+
+![](./readme_images/run_debug_configrations.png)
+
+#### 参考
+
+[PhpStormでXdebugを使えるようにしよう！ - Qiita](https://qiita.com/taniai-lvgs/items/8e9eba112d2d0ed2530f)
